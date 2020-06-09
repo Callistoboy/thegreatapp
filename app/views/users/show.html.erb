@@ -1,0 +1,15 @@
+<h1>TEST</h1>
+<%#= image_tag current_user.gravatar_url %>
+
+<h2>Email: <%= @user.email %></h2>
+<div class="row">
+  <div class="col-sm">
+    <%= link_to 'Редактировать аккаунт', edit_user_path(@user), class: "btn btn-primary btn-sm"%>
+  </div>
+  <div class="col-sm">
+    <%= link_to 'Удалить аккаунт', @user, method: :delete, data: { confirm: 'Вы уверены?' }, class: "btn btn-outline-danger btn-sm"%>
+  </div>
+  <div class="col-sm">
+    <%#= link_to 'Выйти', logout_path, class: "btn btn-outline-primary btn-sm"%>
+  </div>
+</div>
