@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'main#index'
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     resources :users
@@ -6,5 +8,8 @@ Rails.application.routes.draw do
     get 'main/help'
     get 'main/contacts'
     get 'main/about'
+    get '/login', to: 'sessions#new'
+    post '/login', to: 'sessions#create'
+    get '/logout', to: 'sessions#delete'
   end
 end

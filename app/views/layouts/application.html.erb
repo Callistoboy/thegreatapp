@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thegreatapp</title>
+    <title>The Great App</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag "favicon.ico" %>
+
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="text-center">
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <%= render "shared/header" %>
+    <main role="main" class="inner cover">
+      <%= yield %>
+    </main>
+    <%= render "shared/footer" %>
+  </div>
   </body>
 </html>

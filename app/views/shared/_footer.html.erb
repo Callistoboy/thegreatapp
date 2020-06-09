@@ -1,0 +1,11 @@
+<footer class="mastfoot mt-auto">
+  <div class="inner">
+    <p>Artem Pavskii © 2020 | <%= link_to t('global.footer.contacts'), main_contacts_path %> |
+    <% if I18n.locale == :ru %>
+      <%= link_to '🇷🇺', locale: :en %>
+    <% else %>
+      <%= link_to '🇺🇸', locale: :ru %>
+    <% end %>
+    </p>
+  </div>
+</footer>
