@@ -1,0 +1,69 @@
+<div class='image'>
+  <div class='row'>
+    <div class='col-md-3'>
+      <div class='left_controls'>
+        <div class='select_theme'>
+          <%= render "works/button_theme_select", locale: @current_locale%>
+          <br>
+        </div>
+        <div class='modal_list_results'>
+          <%= render "works/button_list_results", locale: @current_locale%>
+          <br>
+        </div>
+        <br>
+        <span class='common_value'>
+          <h2 title='Common value'><%= t('themes.total_values') %>:</h2>
+        </span>
+        <span class='total_values'>
+          <h2 title='Total values'>0</h2>
+        </span>
+      </div>
+    </div>
+    <div class='col-md-9'>
+      <div class='image_display'>
+        <div class='row'>
+          <div class='col-md-12'>
+            <h2 class='up-theme'><%= t('themes.def_select_theme') %></h2>
+            <div id='<% @selected_theme %>'></div>
+          </div>
+          <div class='col-md-1'>
+            <div class='img-left-side'>
+              <h3 title='list to previous image'><i class='fa fa-chevron-circle-left strong'></i></h3>
+            </div>
+          </div>
+          <div class='col-md-10'>
+            <h3 class='text-muted text-md-left'><%= @selected_image_name %></h3>
+            <div class='img-center' title='Default image'>
+              <%= image_tag('def_img.jpg', height: '100%', width: '100%') %>
+              <div class='image_user_value' title='Expert value'></div>
+            </div>
+          </div>
+          <div class='col-md-1'>
+            <div class='img-right-side'>
+              <h3 title='list to next image'>
+                <i class='fa fa-chevron-circle-right'></i>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-12'>
+            <div>
+              <div id='chosen_value'>50</div>
+              <h2 class='down' title='Value scale'><%= t('themes.make_decision') %></h2>
+              <button class='btn btn-success'>
+                <a data-remote='true' format='js' href='#' title='Save image diag results'><%= t('themes.save_decision') %></a>
+              </button>
+              <p class='left'>5%</p>
+              <div id='slider'>
+                <input id='slide' max='100' min='5' onchange='updateSlider(this.value)' step='5' type='range' value='50'>
+              </div>
+              <p class='right'>100%</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

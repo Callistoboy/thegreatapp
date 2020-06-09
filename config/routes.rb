@@ -12,5 +12,10 @@ Rails.application.routes.draw do
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'
     get '/logout', to: 'sessions#delete'
+    match 'works', to: 'works#index', via: 'get'
+    match 'choose_image', to: 'works#choose_image', via: :get
+    match 'display_theme', to: 'works#display_theme', via: :post
+    match 'choose_theme', to: 'works#choose_theme', via: :get
+    get 'results_list', to: 'works#results_list'
   end
 end
