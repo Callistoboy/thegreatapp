@@ -16,8 +16,58 @@
 #
 # This would use the information in config/locales/es.yml.
 #
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
 # To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  global:
+    header:
+      new_post: "New post"
+      exit: "Sign out"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+      main_index: "Home"
+      users: "USERS"
+      posts: "POSTS"
+      help: "Help"
+      about: "About"
+    footer:
+      contacts: "Contacts"
+  views:
+    users:
+      new_user: "Registration"
+      name: "Login"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      submit: "Sign Up"
+    session:
+      error_password: "Invalid password. Please try again."
+      error_email: "User not found."
+      new_user: "Are you new"
+  main:
+    index:
+      main_page_title: "WELCOME"
+      main_page_button: "Experteese"
+  users:
+    create:
+      success: "User has been created"
+      update: "Data has been updated"
+      delete: "User has been deleted"
+  themes:
+    def_select_theme: "Choose theme"
+    make_decision: "Make decision"
+    save_decision: "Save decision"
+    select_theme: "Select theme"
+    result_list: "Results"
+    total_values: "Total values"
