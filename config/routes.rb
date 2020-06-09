@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users
     resources :images
     resources :themes
+    resources :values
     get 'main/index'
     get 'main/help'
     get 'main/contacts'
