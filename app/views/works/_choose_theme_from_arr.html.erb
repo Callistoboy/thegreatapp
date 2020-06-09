@@ -1,6 +1,9 @@
-<div class='form_select'>
-  <%= form_with scope: :post, url: display_theme_path do %>
-    <%= select_tag :theme, options_for_select(@themes, selected: @selected_theme), prompt: t('themes.theme_name'), :onchange => "this.form.submit();" %>
+<div class="form_select">
+  <%= form_tag(display_theme_path, remote: true, local: true, format: "js") do %>
+    <%= select_tag :theme,
+                   options_for_select(@themes, selected: @selected_theme),
+                   prompt: t('theme_name'),
+                   formats: [:js] %>
+        <button class='btn btn-outline-secondary'>Сохранить</button>
   <% end %>
 </div>
-

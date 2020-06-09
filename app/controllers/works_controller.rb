@@ -1,4 +1,5 @@
 class WorksController < ApplicationController
+  include WorkImage
 
   # GET /works
   # GET /works.json
@@ -29,17 +30,12 @@ class WorksController < ApplicationController
     # I18n.locale = session[:current_locale]
 
     theme = params[:theme]
-    theme_id = Theme.find_theme_id(theme)
+    theme_id = 3
+    # theme_id = Theme.find_theme_id(3)
     data = show_image(theme_id, 0)
     session[:selected_theme_id] = theme_id
 
     image_data(theme, data)
-
-
-    respond_to do |format|
-      format.js { render :action => "display_theme" }
-      format.html { redirect_to main_about_path }
-    end
   end
 
   # @note: this method should show image without diag
