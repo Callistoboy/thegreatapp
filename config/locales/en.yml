@@ -34,8 +34,8 @@ en:
     header:
       new_post: "New post"
       exit: "Sign out"
-      sign_in: "Sign in"
-      sign_up: "Sign up"
+      sign_in: "Sign In"
+      sign_up: "Sign Up"
       main_index: "Home"
       users: "USERS"
       posts: "POSTS"
@@ -45,7 +45,8 @@ en:
       contacts: "Contacts"
   views:
     users:
-      new_user: "Registration"
+      new_user: "Registration 🧑‍🚀"
+      fun: "blah-blah-blah"
       name: "Login"
       email: "Email"
       password: "Password"
@@ -57,7 +58,8 @@ en:
       new_user: "Are you new"
   main:
     index:
-      main_page_title: "WELCOME"
+      main_page_title: "Welcome 👋"
+      main_page_title_auth: "Glad to have you here"
       main_page_button: "Experteese"
   users:
     create:

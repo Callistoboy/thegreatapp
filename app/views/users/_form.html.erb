@@ -3,25 +3,43 @@
     <div id="error_explanation">
       <ul>
         <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <div class="alert alert-danger" role="alert">
+            <%= message %>
+          </div>
         <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= form.label t 'views.users.name' %>
-    <%= form.text_field :name %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><%= t('views.users.name') %></span>
+      </div>
+      <%= form.text_field(:name, class: "form-control", placeholder: "Имя пользователя") %>
+    </div>
 
-    <%= form.label t 'views.users.email' %>
-    <%= form.email_field :email %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">@</span>
+      </div>
+      <%= form.email_field(:email, class: "form-control", placeholder: "Email") %>
+    </div>
 
-    <%= form.label t 'views.users.password' %>
-    <%= form.password_field :password %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><%= t('views.users.password') %></span>
+      </div>
+      <%= form.password_field(:password, class: "form-control", placeholder: t('views.users.password')) %>
+    </div>
 
-    <%= form.label t 'views.users.password_confirmation' %>
-    <%= form.password_field :password_confirmation %>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><%= t('views.users.password_confirmation') %></span>
+      </div>
+      <%= form.password_field(:password_confirmation, class: "form-control", placeholder: t('views.users.password')) %>
+    </div>
 
-    <%= form.submit t 'views.users.submit'%>
+    <%= form.submit t('views.users.submit'), class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,12 +1,13 @@
 <% if current_user %>
-  <h1 class="cover-heading"><strong><%= t '.main_page_title' %>, <%= current_user.email %></strong></h1>
-  <p class="lead">Test</p>
+  <h1 class="cover-heading"><strong style="font-size: 70px;"><%= t '.main_page_title_auth'%>, <%= current_user.name %> 🧑‍💻</strong></h1>
+  <p class="lead">Ты успешно авторизовался и можешь начать выставлять свою экспертую оценку!</p>
   <p class="lead">
     <%= link_to t('.main_page_button'), works_path, class: "btn btn-lg btn-secondary" %>
   </p>
 <% else %>
-  <p class="lead">Test</p>
-  <p class="lead">
-    <%= link_to t('global.header.sign_up'), login_path, class: "btn btn-lg btn-secondary" %>
+  <h1 class="cover-heading" style="font-size: 70pt;"><strong><%= t '.main_page_title' %></strong></h1>
+
+  <p class="lead" style="padding-top: 45px;">
+    <%= link_to t('global.header.sign_in'), login_path, class: "btn btn-lg btn-secondary" %>
   </p>
 <% end %>

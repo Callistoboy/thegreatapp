@@ -55,8 +55,8 @@ var selectedThemeId = '<%= @image_data[:theme_id] %>';
 
 var filePath = '<%= asset_path(@image_data[:file_short]) %>'
 $('div.img-center').html('<img alt="Selected Image" src="'+ filePath + '" height="100%" width="100%"/>');
-$('div.img-left-side').html('<i class=\'fa fa-chevron-circle-left strong\'></i>')
-$('div.img-right-side').html('<i class=\'fa fa-chevron-circle-right\'></i>')
+$('div.img-left-side').html('⬅️')
+$('div.img-right-side').html('➡️')
 
 
 //AJAX call to next image list

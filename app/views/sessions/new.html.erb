@@ -1,18 +1,17 @@
-<div>
-  <%= form_for(:session, url: login_path) do |form| %>
-    <div>
-      <%= flash[:danger] %>
-    </div>
-
-    <div>
-      <%= form.label t 'views.users.email' %>
-      <%= form.email_field :email %>
-
-      <%= form.label t 'views.users.password' %>
-      <%= form.password_field :password %>
-
-      <%= form.submit t 'global.header.sign_in', class: "btn btn-light"%>
-    </div>
-    <p><%= t('views.session.new_user') %>? <%= link_to t('global.header.sign_up'), new_user_path, class: "btn btn-link" %></p>
-  <% end %>
-</div>
+<%= form_for(:session, url: login_path) do |form| %>
+  <div>
+    <%= flash[:danger] %>
+  </div>
+  <div class="form-group">
+    <%= form.label(:email, t('views.users.email')) %>
+    <%= form.email_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label(:password, t('views.users.password')) %>
+    <%= form.password_field :password, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.submit(t('global.header.sign_in'), class: "btn btn-primary") %>
+    <%= link_to t('global.header.sign_up'), new_user_path, class: "btn btn-link" %>
+  </div>
+<% end %>
