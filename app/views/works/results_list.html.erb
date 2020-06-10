@@ -20,7 +20,8 @@
       <% @composite_results_paged.each do |composite_diag| %>
         <tr class='one_row'></tr>
         <td style='text-align: left; width: 25em'></td>
-        <td><%= image_tag('/assets/pictures/' + composite_diag.file, {:width => "53", :height => "47", title: "Tested image"}) %></td>
+        <% logger.info(composite_diag.file) %>
+        <td><%= image_tag(asset_path(composite_diag.file), {:width => "53", :height => "47", title: "Tested image"}) %></td>
         <td style='color: rgba(122, 13, 75, 1);'><%= composite_diag.ave_value %></td>
         <td><%= composite_diag.created_at.strftime('%d.%m.%y ') %></td>
         <%= paginate @composite_results_paged %>
@@ -29,7 +30,7 @@
     <br>
     <hr>
   <% end %>
-  <%= link_to "Return to main", work_path, title: "Go to main page" %>
+  <%= link_to "Return to main", works_path, title: "Go to main page" %>
   <br>
   <hr>
 </div>

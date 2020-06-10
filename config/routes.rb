@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     match 'choose_image', to: 'works#choose_image', via: :get
     match 'display_theme', to: 'works#display_theme', via: :post
     match 'choose_theme', to: 'works#choose_theme', via: :get
-    match 'results_list', to: 'work#results_list', via: :get
+    match 'results_list', to: 'works#results_list', via: :get
 
     # Api definition
     namespace :api, defaults: {format: :json} do
