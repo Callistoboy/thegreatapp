@@ -14,6 +14,7 @@ module WorksHelper
     @image_data[:user_valued]  = data[:user_valued]
     @image_data[:value]  = data[:value]
     @image_data[:common_ave_value]  = data[:common_ave_value]
+    @image_data[:file_short]  = data[:file_short]
 
     @image_data
     logger.info(@image_data)

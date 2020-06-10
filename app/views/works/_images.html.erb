@@ -12,8 +12,8 @@
         </div>
         <br>
         <span class='common_value'>
-          <h2 title='Common value'><%= t('themes.total_values') %>:</h2>
         </span>
+        <h2><%= t('themes.total_values') %>:</h2>
         <span class='total_values'>
           <h2 title='Total values'>0</h2>
         </span>
@@ -34,11 +34,9 @@
           <div class='col-md-10'>
             <h3 class='text-muted text-md-left'><%= @selected_image_name %></h3>
             <div class='img-center' title='Default image'>
-              <div class="superpooper">
               <%= image_tag('def_img.jpg', height: '100%', width: '100%', alt: "Default Image", title: 'Default image') %>
-              </div>
-              <div class='image_user_value' title='Expert value'></div>
             </div>
+            <div class='image_user_value' title='Expert value'></div>
           </div>
           <div class='col-md-1'>
             <div class='img-right-side'>

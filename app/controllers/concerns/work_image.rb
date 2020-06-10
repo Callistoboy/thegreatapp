@@ -5,17 +5,12 @@ module WorkImage
   # display image by index for searched theme
   def show_image(theme_id, image_index)
     theme_images = Image.theme_images(theme_id)
-
     current_user_id = session[:user_id]
-    logger.info "In show_image: current_user_id = #{current_user_id.inspect} "
-
     one_image_attr = theme_images[image_index].attributes
     image_id = one_image_attr["id"]
-    logger.info "In show_image: one_image_attr = #{one_image_attr.inspect} "
-
+    file_short = one_image_attr["file"].slice(18..)
     user_valued, value = Value.user_valued_exists(current_user_id, image_id) # 1/0 # true/false .exists?
-    logger.info "In show_image: user_valued = #{user_valued.inspect} "
-
+    logger.info "user_valued = #{user_valued.inspect} "
     values_qty = Value.all.count.round
 
     if user_valued == 1
@@ -40,9 +35,10 @@ module WorkImage
              file: one_image_attr["file"],
              user_valued: user_valued,
              value: value,
-             common_ave_value: common_ave_value
+             common_ave_value: common_ave_value,
+             file_short: file_short
     }
-    logger.info "In show_image:  data = #{data.inspect} "
+    logger.info "data = #{data.inspect} "
     data
   end
 

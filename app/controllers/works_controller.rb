@@ -30,8 +30,8 @@ class WorksController < ApplicationController
     # I18n.locale = session[:current_locale]
 
     theme = params[:theme]
-    theme_id = 3
-    # theme_id = Theme.find_theme_id(3)
+    logger.info(theme.inspect)
+    theme_id = Theme.find_theme_id(theme).id
     data = show_image(theme_id, 0)
     session[:selected_theme_id] = theme_id
 

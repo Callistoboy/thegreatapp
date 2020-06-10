@@ -16,5 +16,8 @@ module Thegreatapp
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
     config.i18n.enforce_available_locales = true
+    # config.public_file_server.enabled = true
+    config.assets.digest = true
+    config.assets.enabled = false
   end
 end
