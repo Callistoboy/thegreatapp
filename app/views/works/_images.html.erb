@@ -6,15 +6,15 @@
           <%= render "works/button_theme_select", locale: @current_locale%>
           <br>
         </div>
-        <div class='modal_list_results'>
+        <div class='modal_list_results' style="display: none">
           <%= render "works/button_list_results", locale: @current_locale%>
           <br>
         </div>
         <br>
         <span class='common_value'>
         </span>
-        <h2><%= t('themes.total_values') %>:</h2>
-        <span class='total_values'>
+        <h2 class="totalyspice" style="display: none"><%= t('themes.total_values') %>:</h2>
+        <span class='total_values' style="display: none">
           <h2 title='Total values'>0</h2>
         </span>
       </div>
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class='row'>
-          <div class='col-md-12'>
+          <div class='col-md-12 res' style="display: none">
             <div>
               <div id='chosen_value'>50</div>
               <h2 class='down' title='Value scale'><%= t('themes.make_decision') %></h2>

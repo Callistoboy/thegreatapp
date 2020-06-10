@@ -7,7 +7,7 @@ class WorksController < ApplicationController
     @images_count = Image.all.count
     @selected_theme = "Select theme to leave your answer"
     @selected_theme = t('themes.def_select_theme')
-    @selected_image_name = 'современный стиль'
+    @selected_image_name = 'Оценка современных интерьеров'
     @values_qty = Value.all.count
     # @current_locale = I18n.locale
     @themes = Theme.all.pluck(:name)

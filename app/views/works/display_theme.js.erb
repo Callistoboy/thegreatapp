@@ -7,15 +7,18 @@ $('span.total_values').html('<h2 title=\'Total values\'>' + valuesQty + '</h2>')
 // show theme
 var selectedTheme = '<%= @image_data[:theme] %>';
 
-//if (selectedTheme == "Выберите тему" || selectedTheme == "Theme Name") {
-//    $('.img-left-side').css({"display": "none"});
-//    $('.img-right-side').css({"display": "none"});
-//    $('.image .image_display .image_diag').css({"display": "none"});
-//} else {
-//    $('.img-left-side').css({"display": "block"});
-//    $('.img-right-side').css({"display": "block"});
-//    $('.image .image_display .image_diag').css({"display": "block"});
-//}
+if (selectedTheme == "Выберите тему" || selectedTheme == "Theme Name") {
+    $('.img-left-side').css({"display": "none"});
+    $('.img-right-side').css({"display": "none"});
+    $('.image .image_display .image_diag').css({"display": "none"});
+} else {
+    $('div.col-md-12.res').css({"display": "block"});
+    $('div.modal_list_results').css({"display": "block"});
+    $('h2.totalyspice').css({"display": "block"});
+    $('span.total_values').css({"display": "block"});
+
+
+}
 var userValuedImage = '<%= @image_data[:user_valued] %>';
 
 if (userValuedImage == 1) {

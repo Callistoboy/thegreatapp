@@ -22,7 +22,7 @@
         <td style='text-align: left; width: 25em'></td>
         <% logger.info(composite_diag.file) %>
         <td><%= image_tag(asset_path(composite_diag.file), {:width => "53", :height => "47", title: "Tested image"}) %></td>
-        <td style='color: rgba(122, 13, 75, 1);'><%= composite_diag.ave_value %></td>
+        <td><%= composite_diag.ave_value %></td>
         <td><%= composite_diag.created_at.strftime('%d.%m.%y ') %></td>
         <%= paginate @composite_results_paged %>
       <% end %>
