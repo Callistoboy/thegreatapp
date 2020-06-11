@@ -53,7 +53,7 @@ var themeImagesSize = '<%= @image_data[:images_arr_size] %>';
 var selectedThemeId = '<%= @image_data[:theme_id] %>';
 
 var filePath = '<%= asset_path(@image_data[:file_short]) %>'
-$('div.img-center').html('<img alt="Selected Image" src="'+ filePath + '" height="100%" width="100%"/>');
+$('div.img-center').html('<img alt="Selected Image" src="' + filePath + '" height="100%" width="100%"/>');
 $('div.img-left-side').html('⬅️')
 $('div.img-right-side').html('➡️')
 
@@ -78,8 +78,56 @@ $('.img-right-side').click(function (event) {
         oneImageName = data_return.name;
         oneImageFile = data_return.file_short;
         oneImageId = data_return.image_id;
-        var pathImage = "assets/pictures/" + oneImageFile;
-//        var filePath = '<%#= asset_path(data_return.file_short) %>'
+        switch (oneImageFile) {
+            case 'themes/c1.jpg':
+                var pathImage = '<%= asset_path("themes/c1.jpg") %>';
+                break;
+            case 'themes/c2.jpg':
+                var pathImage = '<%= asset_path("themes/c2.jpg") %>';
+                break;
+            case 'themes/c3.jpg':
+                var pathImage = '<%= asset_path("themes/c3.jpg") %>';
+                break;
+            case 'themes/l1.jpg':
+                var pathImage = '<%= asset_path("themes/l1.jpg") %>';
+                break;
+            case 'themes/l2.jpg':
+                var pathImage = '<%= asset_path("themes/l2.jpg") %>';
+                break;
+            case 'themes/l3.jpg':
+                var pathImage = '<%= asset_path("themes/l3.jpg") %>';
+                break;
+            case 'themes/m1.jpg':
+                var pathImage = '<%= asset_path("themes/m1.jpg") %>';
+                break;
+            case 'themes/m2.jpg':
+                var pathImage = '<%= asset_path("themes/m2.jpg") %>';
+                break;
+            case 'themes/m3.jpg':
+                var pathImage = '<%= asset_path("themes/m3.jpg") %>';
+                break;
+            case 'themes/m4.jpg':
+                var pathImage = '<%= asset_path("themes/m4.jpg") %>';
+                break;
+            case 'themes/m5.jpg':
+                var pathImage = '<%= asset_path("themes/m5.jpg") %>';
+                break;
+            case 'themes/s1.jpg':
+                var pathImage = '<%= asset_path("themes/s1.jpg") %>';
+                break;
+            case 'themes/s2.jpg':
+                var pathImage = '<%= asset_path("themes/s2.jpg") %>';
+                break;
+            case 'themes/s3.jpg':
+                var pathImage = '<%= asset_path("themes/s3.jpg") %>';
+                break;
+            case 'themes/s4.jpg':
+                var pathImage = '<%= asset_path("themes/s4.jpg") %>';
+                break;
+            case 'themes/s5.jpg':
+                var pathImage = '<%= asset_path("themes/s5.jpg") %>';
+                break;
+        }
 
         $('h3.text-muted.text-md-left').html(oneImageName)
 
@@ -128,8 +176,56 @@ $('.img-left-side').click(function (event) {
         oneImageFile = data_return.file_short;
         oneImageFile2 = data_return.file;
         oneImageId = data_return.image_id;
-        var pathImage = "assets/pictures/" + oneImageFile;
-//        var filePath = '<%#= asset_path(data_return.file_short) %>'
+        switch (oneImageFile) {
+            case 'themes/c1.jpg':
+                var pathImage = '<%= asset_path("themes/c1.jpg") %>';
+                break;
+            case 'themes/c2.jpg':
+                var pathImage = '<%= asset_path("themes/c2.jpg") %>';
+                break;
+            case 'themes/c3.jpg':
+                var pathImage = '<%= asset_path("themes/c3.jpg") %>';
+                break;
+            case 'themes/l1.jpg':
+                var pathImage = '<%= asset_path("themes/l1.jpg") %>';
+                break;
+            case 'themes/l2.jpg':
+                var pathImage = '<%= asset_path("themes/l2.jpg") %>';
+                break;
+            case 'themes/l3.jpg':
+                var pathImage = '<%= asset_path("themes/l3.jpg") %>';
+                break;
+            case 'themes/m1.jpg':
+                var pathImage = '<%= asset_path("themes/m1.jpg") %>';
+                break;
+            case 'themes/m2.jpg':
+                var pathImage = '<%= asset_path("themes/m2.jpg") %>';
+                break;
+            case 'themes/m3.jpg':
+                var pathImage = '<%= asset_path("themes/m3.jpg") %>';
+                break;
+            case 'themes/m4.jpg':
+                var pathImage = '<%= asset_path("themes/m4.jpg") %>';
+                break;
+            case 'themes/m5.jpg':
+                var pathImage = '<%= asset_path("themes/m5.jpg") %>';
+                break;
+            case 'themes/s1.jpg':
+                var pathImage = '<%= asset_path("themes/s1.jpg") %>';
+                break;
+            case 'themes/s2.jpg':
+                var pathImage = '<%= asset_path("themes/s2.jpg") %>';
+                break;
+            case 'themes/s3.jpg':
+                var pathImage = '<%= asset_path("themes/s3.jpg") %>';
+                break;
+            case 'themes/s4.jpg':
+                var pathImage = '<%= asset_path("themes/s4.jpg") %>';
+                break;
+            case 'themes/s5.jpg':
+                var pathImage = '<%= asset_path("themes/s5.jpg") %>';
+                break;
+        }
 
         $('h3.text-muted.text-md-left').html(oneImageName)
 
@@ -185,7 +281,7 @@ $('button.btn.btn-success').unbind("click").click(function (event) {
         var userValuedFlag = data_return.user_valued;
         if (userValuedFlag === 1) {
             var valuesQty = data_return.values_qty;
-            $('span.total_values').html('<h2 title=\'Total values\'>'+ valuesQty +'</h2>');
+            $('span.total_values').html('<h2 title=\'Total values\'>' + valuesQty + '</h2>');
             var imageCommonValue = data_return.common_ave_value;
             console.log("6 IN save_value: imageCommonValue = " + imageCommonValue);
         } else {

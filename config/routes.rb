@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :images
+
   root 'main#index'
   scope "/:locale", locale: /#{I18n.available_locales.join("|")}/ do
     resources :users
-    resources :images
     resources :themes
     resources :values
     get 'main/index'
