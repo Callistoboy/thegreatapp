@@ -9,7 +9,6 @@ class WorksController < ApplicationController
     @selected_theme = t('themes.def_select_theme')
     @selected_image_name = 'Оценка современных интерьеров'
     @values_qty = Value.all.count
-    # @current_locale = I18n.locale
     @themes = Theme.all.pluck(:name)
     session[:selected_theme_id] = @selected_theme # to display nothing
   end

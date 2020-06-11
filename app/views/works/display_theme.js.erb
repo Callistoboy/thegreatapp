@@ -2,7 +2,6 @@
 var imageData = '<%= raw @image_data %>';
 console.log("@image_data = " + imageData);
 var valuesQty = '<%= @image_data[:values_qty] %>';
-$('span.total_values').html('<h2 title=\'Total values\'>' + valuesQty + '</h2>');
 
 // show theme
 var selectedTheme = '<%= @image_data[:theme] %>';
@@ -16,8 +15,7 @@ if (selectedTheme == "Выберите тему" || selectedTheme == "Theme Name
     $('div.modal_list_results').css({"display": "block"});
     $('h2.totalyspice').css({"display": "block"});
     $('span.total_values').css({"display": "block"});
-
-
+    $('span.total_values').html('<h2 title=\'Total values\'>' + valuesQty + '</h2>');
 }
 var userValuedImage = '<%= @image_data[:user_valued] %>';
 
