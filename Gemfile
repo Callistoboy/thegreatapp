@@ -35,12 +35,15 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'bcrypt', '~> 3.1.7'
 gem "font-awesome-rails"
 gem 'kaminari'
+gem 'simplecov', :require => false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'rspec-rails', '~> 4.0.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do
