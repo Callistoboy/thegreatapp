@@ -17,6 +17,8 @@ module Thegreatapp
     config.i18n.fallbacks = [:en]
     config.i18n.enforce_available_locales = true
     # config.public_file_server.enabled = true
+    config.assets.paths << Rails.root.join("assets", "images", "themes")
+    config.assets.digest = false
 
   end
 end
